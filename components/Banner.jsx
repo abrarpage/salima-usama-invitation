@@ -18,6 +18,7 @@ export default function Banner({ to, onOpen }) {
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ')
     : '';
+    console.log("pathname",router.pathname,router?.query);
   return (
     <div
       className={`fixed z-50 top-0 right-0 bottom-0 left-0 transition ${
@@ -48,13 +49,14 @@ export default function Banner({ to, onOpen }) {
           <a
             href="#cover"
             onClick={() => {
-              setIsShow(false);
+              router.push(`/invitation?${router?.query?.to?`to=${router?.query?.to}`:''}`)
+              // setIsShow(false);
 
-              setTimeout(function () {
-                setIsHide(true);
-              }, 1000);
+              // setTimeout(function () {
+              //   setIsHide(true);
+              // }, 1000);
 
-              onOpen(true);
+              // onOpen(true);
             }}
             className="block w-40 px-6 py-2 mx-auto text-xs font-semibold text-center text-black transition bg-white rounded-lg hover:bg-gray-300"
           >

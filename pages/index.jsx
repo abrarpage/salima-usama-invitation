@@ -94,53 +94,9 @@ export default function Home() {
       {/* BANNER */}
       <Banner to={to} onOpen={playAudio} />
       {/* NAV MENU */}
-      <NavMenu />
+      {/* <NavMenu /> */}
       {/* PLAYER */}
-      <button
-        onClick={() => playAudio(!isPlay)}
-        className={`fixed transition z-40 flex items-center justify-center w-12 h-12 border border-black rounded-full bottom-16 right-2 bg-white/50 `}
-      >
-        <Image
-          alt="playback"
-          src={isPlay ? "/stop.svg" : "/play.svg"}
-          width={20}
-          height={20}
-        />
-      </button>
-      <main className={`bg-white overflow-hidden ${poppins.className}`}>
-        <Head>
-          <title>Pernikahan Salimah & Usamah</title>
-        </Head>
-        {/* COVER */}
-        <Cover />
-
-        {/* BRIDES */}
-        <Brides />
-
-        {/* DATE */}
-        <Date sesi={sesi} />
-        <Maps/>
-
-        {/* GALLERT */}
-        {/* <Gallery />  */}
-
-        {/* HADIAH & BUKU TAMU */}
-        <Gift />
-
-        {/* UCAPAN DOA */}
-        <Wishes />
-
-        {/* END */}
-        <End />
-
-        <div className="p-4 pb-16 bg-white">
-          <p className="text-xs text-center text-black">
-            © Copyright 2023 Usamah Hafidzuddin
-          </p>
-        </div>
-
-        <ToastContainer />
-      </main>
+   
     </div>
   );
 }
